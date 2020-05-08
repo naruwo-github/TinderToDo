@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
+    
+    let realm = try! Realm()
+    var toDoCells: Results<ToDoModel>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        do {
+            toDoCells = realm.objects(ToDoModel.self)
+        }
     }
 
 

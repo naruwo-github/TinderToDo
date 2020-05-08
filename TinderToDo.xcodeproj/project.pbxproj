@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		05CCF6FD24644B4A002A524E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CCF6FB24644B4A002A524E /* Main.storyboard */; };
 		05CCF6FF24644B4B002A524E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CCF6FE24644B4B002A524E /* Assets.xcassets */; };
 		05CCF70224644B4B002A524E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CCF70024644B4B002A524E /* LaunchScreen.storyboard */; };
+		05F937282464E31E00470DAD /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F937272464E31E00470DAD /* ToDoModel.swift */; };
+		A68CAEF8852C2AA4F3A61585 /* Pods_TinderToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E3281374AA6DC736CD451D /* Pods_TinderToDo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		05CCF6FE24644B4B002A524E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CCF70124644B4B002A524E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CCF70324644B4B002A524E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05F937272464E31E00470DAD /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
+		89E3281374AA6DC736CD451D /* Pods_TinderToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD61B35D7E752B8B9FFBF464 /* Pods-TinderToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderToDo.debug.xcconfig"; path = "Target Support Files/Pods-TinderToDo/Pods-TinderToDo.debug.xcconfig"; sourceTree = "<group>"; };
+		C226CA9E48F4A55ED6C8C529 /* Pods-TinderToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderToDo.release.xcconfig"; path = "Target Support Files/Pods-TinderToDo/Pods-TinderToDo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68CAEF8852C2AA4F3A61585 /* Pods_TinderToDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				05CCF6F424644B4A002A524E /* TinderToDo */,
 				05CCF6F324644B4A002A524E /* Products */,
+				6BC28039DA9C1E72E46C6865 /* Pods */,
+				66A35DFB076044FAFBB973A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +65,10 @@
 		05CCF6F424644B4A002A524E /* TinderToDo */ = {
 			isa = PBXGroup;
 			children = (
-				05CCF70924644B5A002A524E /* Delegates */,
-				05CCF6F924644B4A002A524E /* ViewController.swift */,
+				05F937262464E2E800470DAD /* View */,
+				05F937252464E2D000470DAD /* Model */,
 				05CCF70A24644B66002A524E /* StoryBoards */,
+				05CCF70924644B5A002A524E /* Delegates */,
 				05CCF6FE24644B4B002A524E /* Assets.xcassets */,
 				05CCF70324644B4B002A524E /* Info.plist */,
 			);
@@ -83,6 +93,39 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
+		05F937252464E2D000470DAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05F937272464E31E00470DAD /* ToDoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		05F937262464E2E800470DAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05CCF6F924644B4A002A524E /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66A35DFB076044FAFBB973A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89E3281374AA6DC736CD451D /* Pods_TinderToDo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BC28039DA9C1E72E46C6865 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD61B35D7E752B8B9FFBF464 /* Pods-TinderToDo.debug.xcconfig */,
+				C226CA9E48F4A55ED6C8C529 /* Pods-TinderToDo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05CCF70624644B4B002A524E /* Build configuration list for PBXNativeTarget "TinderToDo" */;
 			buildPhases = (
+				E5BC11FD3589401180230C8D /* [CP] Check Pods Manifest.lock */,
 				05CCF6EE24644B4A002A524E /* Sources */,
 				05CCF6EF24644B4A002A524E /* Frameworks */,
 				05CCF6F024644B4A002A524E /* Resources */,
+				1BC8A4A1859192ED7E92D710 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,12 +194,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1BC8A4A1859192ED7E92D710 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinderToDo/Pods-TinderToDo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TinderToDo/Pods-TinderToDo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinderToDo/Pods-TinderToDo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5BC11FD3589401180230C8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TinderToDo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		05CCF6EE24644B4A002A524E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				05CCF6FA24644B4A002A524E /* ViewController.swift in Sources */,
+				05F937282464E31E00470DAD /* ToDoModel.swift in Sources */,
 				05CCF6F624644B4A002A524E /* AppDelegate.swift in Sources */,
 				05CCF6F824644B4A002A524E /* SceneDelegate.swift in Sources */,
 			);
@@ -298,6 +386,7 @@
 		};
 		05CCF70724644B4B002A524E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD61B35D7E752B8B9FFBF464 /* Pods-TinderToDo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +405,7 @@
 		};
 		05CCF70824644B4B002A524E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C226CA9E48F4A55ED6C8C529 /* Pods-TinderToDo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
