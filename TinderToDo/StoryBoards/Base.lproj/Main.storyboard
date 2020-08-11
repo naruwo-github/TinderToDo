@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -43,7 +43,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ec9-Yz-fmZ" userLabel="Bottom View">
                                 <rect key="frame" x="0.0" y="762" width="414" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VP-ks-B9e" userLabel="Center Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VP-ks-B9e" userLabel="Center Button" customClass="ExtendedButton" customModule="TinderToDo" customModuleProvider="target">
                                         <rect key="frame" x="167" y="10" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -53,15 +53,16 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="40"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableShadow" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="nextPageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6xN-lg-Td3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3K-eY-Lro" userLabel="Right Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3K-eY-Lro" userLabel="Right Button" customClass="ExtendedButton" customModule="TinderToDo" customModuleProvider="target">
                                         <rect key="frame" x="314" y="10" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -71,15 +72,16 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="40"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableShadow" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="newToDoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9NX-Av-m7q"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-BB-VB6" userLabel="Left Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-BB-VB6" userLabel="Left Button" customClass="ExtendedButton" customModule="TinderToDo" customModuleProvider="target">
                                         <rect key="frame" x="20" y="10" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -89,9 +91,10 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="40"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableShadow" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="otherButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gzy-aW-dKn"/>
@@ -153,60 +156,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-wp-2gE">
-                                <rect key="frame" x="186" y="155" width="38" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-wp-2gE">
+                                <rect key="frame" x="183.5" y="204.5" width="47" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ra4-Ny-bXy" userLabel="Title Text Field">
-                                <rect key="frame" x="157" y="200" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ra4-Ny-bXy" userLabel="Title Text Field">
+                                <rect key="frame" x="124" y="254.5" width="166" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="memo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdt-hK-yTU">
-                                <rect key="frame" x="184" y="267" width="48" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdt-hK-yTU">
+                                <rect key="frame" x="173" y="308.5" width="68.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="memo: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pPv-fa-kHy" userLabel="Memo Text View">
-                                <rect key="frame" x="88" y="336" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="memo: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pPv-fa-kHy" userLabel="Memo Text View">
+                                <rect key="frame" x="62" y="358.5" width="290" height="179"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snX-X8-Z8Q">
-                                <rect key="frame" x="88" y="566" width="43" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snX-X8-Z8Q" customClass="ExtendedButton" customModule="TinderToDo" customModuleProvider="target">
+                                <rect key="frame" x="62" y="557.5" width="80" height="40"/>
+                                <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Sp2-zl-Lva"/>
+                                    <constraint firstAttribute="width" constant="80" id="zve-iY-BDL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableShadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="WPT-fg-zx0" eventType="touchUpInside" id="KIM-cU-DMk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zk0-lv-R5o">
-                                <rect key="frame" x="279" y="568" width="57" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zk0-lv-R5o" customClass="ExtendedButton" customModule="TinderToDo" customModuleProvider="target">
+                                <rect key="frame" x="272" y="557.5" width="80" height="40"/>
+                                <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hJp-68-xq8"/>
+                                    <constraint firstAttribute="width" constant="80" id="tQ6-Wa-Vz5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Delete">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableShadow" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="deleteButtonTapped:" destination="WPT-fg-zx0" eventType="touchUpInside" id="pQK-2l-Bsp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pPv-fa-kHy" firstAttribute="trailing" secondItem="zk0-lv-R5o" secondAttribute="trailing" id="04p-ZC-glC"/>
+                            <constraint firstItem="pPv-fa-kHy" firstAttribute="centerY" secondItem="fDi-ea-77W" secondAttribute="centerY" id="3wm-IO-BCH"/>
+                            <constraint firstItem="fdt-hK-yTU" firstAttribute="top" secondItem="ra4-Ny-bXy" secondAttribute="bottom" constant="20" id="4Mh-k0-G9p"/>
+                            <constraint firstItem="zk0-lv-R5o" firstAttribute="top" secondItem="pPv-fa-kHy" secondAttribute="bottom" constant="20" id="8bj-Rc-dCU"/>
+                            <constraint firstItem="snX-X8-Z8Q" firstAttribute="top" secondItem="pPv-fa-kHy" secondAttribute="bottom" constant="20" id="8hc-jr-kcK"/>
+                            <constraint firstItem="pPv-fa-kHy" firstAttribute="height" secondItem="fDi-ea-77W" secondAttribute="height" multiplier="0.2" id="D8b-9y-cMb"/>
+                            <constraint firstItem="ra4-Ny-bXy" firstAttribute="top" secondItem="Ld1-wp-2gE" secondAttribute="bottom" constant="20" id="DGX-Hc-gma"/>
+                            <constraint firstItem="snX-X8-Z8Q" firstAttribute="leading" secondItem="pPv-fa-kHy" secondAttribute="leading" id="GwT-z9-AaY"/>
+                            <constraint firstItem="Ld1-wp-2gE" firstAttribute="centerX" secondItem="fDi-ea-77W" secondAttribute="centerX" id="P9i-Jk-mE6"/>
+                            <constraint firstItem="fdt-hK-yTU" firstAttribute="centerX" secondItem="fDi-ea-77W" secondAttribute="centerX" id="Yay-Mf-Pks"/>
+                            <constraint firstItem="pPv-fa-kHy" firstAttribute="top" secondItem="fdt-hK-yTU" secondAttribute="bottom" constant="20" id="YrO-09-mU6"/>
+                            <constraint firstItem="pPv-fa-kHy" firstAttribute="width" secondItem="fDi-ea-77W" secondAttribute="width" multiplier="0.7" id="ZYe-bh-bFU"/>
+                            <constraint firstItem="pPv-fa-kHy" firstAttribute="centerX" secondItem="fDi-ea-77W" secondAttribute="centerX" id="bDY-5p-9xb"/>
+                            <constraint firstItem="ra4-Ny-bXy" firstAttribute="centerX" secondItem="fDi-ea-77W" secondAttribute="centerX" id="raK-Eu-au3"/>
+                            <constraint firstItem="ra4-Ny-bXy" firstAttribute="width" secondItem="fDi-ea-77W" secondAttribute="width" multiplier="0.4" id="u6b-Hh-y4h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dCE-BE-Cn8"/>
                     </view>
                     <connections>
