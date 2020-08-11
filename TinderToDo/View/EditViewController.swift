@@ -10,13 +10,12 @@ import UIKit
 import RealmSwift
 
 class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var memoTextView: UITextView!
+    @IBOutlet private weak var titleTextField: UITextField!
+    @IBOutlet private weak var memoTextView: UITextView!
     
     let realm = try! Realm()
     var toDoCells: Results<ToDoModel>!
-    //マイナスの場合は新しいセルを表す
-    var cellID: Int = -1
+    var cellID: Int = -1    // NOTE: マイナスの場合は新しいセルを表す
     var cell: ToDoModel!
     
     override func viewDidLoad() {
@@ -25,10 +24,10 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
             toDoCells = realm.objects(ToDoModel.self)
         }
         if cellID >= 0 {
-            //編集モード
+            // 編集モード
             cell = toDoCells[cellID]
         } else {
-            //新規要素追加モード
+            // 新規要素追加モード
             cell = ToDoModel()
             cell.id = toDoCells.count
         }
@@ -41,7 +40,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         NotificationCenter.default.post(name: .disappeareEditVC, object: nil)
     }
 
-    @IBAction func saveButtonTapped(_ sender: Any) {
+    @IBAction private func saveButtonTapped(_ sender: Any) {
         do{
             try realm.write({ () -> Void in
                 cell.title = self.titleTextField.text ?? "Title"
@@ -58,13 +57,11 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func deleteButtonTapped(_ sender: Any) {
+    @IBAction private func deleteButtonTapped(_ sender: Any) {
         do{
             try realm.write {
                 if cellID >= 0 {
                     realm.delete(cell)
-                } else {
-                    //不要
                 }
             }
         }catch{
@@ -81,15 +78,5 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
             self.titleTextField.resignFirstResponder()
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

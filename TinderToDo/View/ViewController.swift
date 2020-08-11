@@ -10,18 +10,17 @@ import UIKit
 import RealmSwift
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var newToDoButton: UIButton!
-    @IBOutlet weak var nextPageButton: UIButton!
-    @IBOutlet weak var otherButton: UIButton!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var newToDoButton: UIButton!
+    @IBOutlet private weak var nextPageButton: UIButton!
+    @IBOutlet private weak var otherButton: UIButton!
     
     let realm = try! Realm()
     var toDoCells: Results<ToDoModel>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         do {
             toDoCells = realm.objects(ToDoModel.self)
         }
@@ -31,20 +30,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.refresh()
     }
     
-    @IBAction func newToDoButtonTapped(_ sender: Any) {
+    @IBAction private func newToDoButtonTapped(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main)
         .instantiateViewController(withIdentifier: "EditViewController")
         as! EditViewController
         present(vc, animated: true)
     }
     
-    @IBAction func nextPageButtonTapped(_ sender: Any) {
+    @IBAction private func nextPageButtonTapped(_ sender: Any) {
     }
     
-    @IBAction func otherButtonTapped(_ sender: Any) {
+    @IBAction private func otherButtonTapped(_ sender: Any) {
     }
     
-    //削除処理
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             do{
@@ -58,7 +56,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    //セルの生成
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath ) as! ToDoItemCell
         let object = toDoCells[indexPath.row]
