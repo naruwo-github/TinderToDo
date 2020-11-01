@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TinderToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TTViewController" customModule="TinderToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kH1-4g-Uta" userLabel="Top View">
-                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZGV-ih-YPO">
-                                        <rect key="frame" x="160.5" y="8" width="93.5" height="34.5"/>
+                                        <rect key="frame" x="253.5" y="8" width="93.5" height="34.5"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="ZGV-ih-YPO" firstAttribute="centerY" secondItem="kH1-4g-Uta" secondAttribute="centerY" id="Rqb-3T-bzf"/>
                                     <constraint firstAttribute="height" constant="50" id="cbv-TU-9KN"/>
@@ -33,18 +33,18 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zbI-Qs-SPY" userLabel="ToDo Table View">
-                                <rect key="frame" x="0.0" y="94" width="414" height="668"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="50" width="600" height="450"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="h2A-Ie-gdE"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="EGI-9F-jdr"/>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ec9-Yz-fmZ" userLabel="Bottom View">
-                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VP-ks-B9e" userLabel="Center Button" customClass="ExtendedButton" customModule="TinderToDo" customModuleProvider="target">
-                                        <rect key="frame" x="167" y="10" width="80" height="80"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VP-ks-B9e" userLabel="Center Button" customClass="TTCustomUIButton" customModule="TinderToDo" customModuleProvider="target">
+                                        <rect key="frame" x="260" y="10" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="4VP-ks-B9e" secondAttribute="height" multiplier="1:1" id="zC0-IW-bTd"/>
@@ -62,8 +62,8 @@
                                             <action selector="nextPageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6xN-lg-Td3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3K-eY-Lro" userLabel="Right Button" customClass="ExtendedButton" customModule="TinderToDo" customModuleProvider="target">
-                                        <rect key="frame" x="314" y="10" width="80" height="80"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3K-eY-Lro" userLabel="Right Button" customClass="TTCustomUIButton" customModule="TinderToDo" customModuleProvider="target">
+                                        <rect key="frame" x="500" y="10" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="R3K-eY-Lro" secondAttribute="height" multiplier="1:1" id="sMV-t3-cON"/>
@@ -81,7 +81,7 @@
                                             <action selector="newToDoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9NX-Av-m7q"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-BB-VB6" userLabel="Left Button" customClass="ExtendedButton" customModule="TinderToDo" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-BB-VB6" userLabel="Left Button" customClass="TTCustomUIButton" customModule="TinderToDo" customModuleProvider="target">
                                         <rect key="frame" x="20" y="10" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -101,7 +101,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="KZc-BB-VB6" secondAttribute="bottom" constant="10" id="7rJ-Sr-OUL"/>
                                     <constraint firstItem="KZc-BB-VB6" firstAttribute="leading" secondItem="ec9-Yz-fmZ" secondAttribute="leading" constant="20" id="8gW-4q-f0J"/>
@@ -119,7 +119,8 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ec9-Yz-fmZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0L3-er-Qsx"/>
                             <constraint firstItem="zbI-Qs-SPY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1fY-nP-jum"/>
@@ -135,7 +136,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ec9-Yz-fmZ" secondAttribute="bottom" id="t6H-6h-PFo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kH1-4g-Uta" secondAttribute="trailing" id="voa-X7-Afr"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="newToDoButton" destination="R3K-eY-Lro" id="hfy-AA-jZZ"/>
@@ -151,37 +151,37 @@
         <!--Edit View Controller-->
         <scene sceneID="A8g-Va-txm">
             <objects>
-                <viewController storyboardIdentifier="EditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WPT-fg-zx0" customClass="EditViewController" customModule="TinderToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WPT-fg-zx0" customClass="TTEditViewController" customModule="TinderToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fDi-ea-77W">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-wp-2gE">
-                                <rect key="frame" x="183.5" y="204.5" width="47" height="30"/>
+                                <rect key="frame" x="276.5" y="86" width="47" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ra4-Ny-bXy" userLabel="Title Text Field">
-                                <rect key="frame" x="124" y="254.5" width="166" height="34"/>
+                                <rect key="frame" x="180" y="136" width="240" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdt-hK-yTU">
-                                <rect key="frame" x="173" y="308.5" width="68.5" height="30"/>
+                                <rect key="frame" x="266" y="190" width="68.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="memo: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pPv-fa-kHy" userLabel="Memo Text View">
-                                <rect key="frame" x="62" y="358.5" width="290" height="179"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="90" y="240" width="420" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snX-X8-Z8Q" customClass="ExtendedButton" customModule="TinderToDo" customModuleProvider="target">
-                                <rect key="frame" x="62" y="557.5" width="80" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snX-X8-Z8Q" customClass="TTCustomUIButton" customModule="TinderToDo" customModuleProvider="target">
+                                <rect key="frame" x="90" y="380" width="80" height="40"/>
                                 <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Sp2-zl-Lva"/>
@@ -201,8 +201,8 @@
                                     <action selector="saveButtonTapped:" destination="WPT-fg-zx0" eventType="touchUpInside" id="KIM-cU-DMk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zk0-lv-R5o" customClass="ExtendedButton" customModule="TinderToDo" customModuleProvider="target">
-                                <rect key="frame" x="272" y="557.5" width="80" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zk0-lv-R5o" customClass="TTCustomUIButton" customModule="TinderToDo" customModuleProvider="target">
+                                <rect key="frame" x="430" y="380" width="80" height="40"/>
                                 <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="hJp-68-xq8"/>
@@ -223,6 +223,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="dCE-BE-Cn8"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pPv-fa-kHy" firstAttribute="trailing" secondItem="zk0-lv-R5o" secondAttribute="trailing" id="04p-ZC-glC"/>
@@ -241,7 +242,6 @@
                             <constraint firstItem="ra4-Ny-bXy" firstAttribute="centerX" secondItem="fDi-ea-77W" secondAttribute="centerX" id="raK-Eu-au3"/>
                             <constraint firstItem="ra4-Ny-bXy" firstAttribute="width" secondItem="fDi-ea-77W" secondAttribute="width" multiplier="0.4" id="u6b-Hh-y4h"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dCE-BE-Cn8"/>
                     </view>
                     <connections>
                         <outlet property="memoTextView" destination="pPv-fa-kHy" id="xJ7-jk-jBx"/>
@@ -253,4 +253,12 @@
             <point key="canvasLocation" x="941" y="116"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

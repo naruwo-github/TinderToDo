@@ -1,5 +1,5 @@
 //
-//  UIButtonExtension.swift
+//  TTCustomUIButton.swift
 //  TinderToDo
 //
 //  Created by Narumi Nogawa on 2020/08/11.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class ExtendedButton: UIButton {
+@IBDesignable class TTCustomUIButton: UIButton {
     
     @IBInspectable var borderColor: UIColor = UIColor.clear {
         didSet {

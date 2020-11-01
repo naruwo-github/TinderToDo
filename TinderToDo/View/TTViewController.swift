@@ -10,7 +10,7 @@ import UIKit
 
 import RealmSwift
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TTViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var newToDoButton: UIButton!
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction private func newToDoButtonTapped(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main)
         .instantiateViewController(withIdentifier: "EditViewController")
-        as! EditViewController
+        as! TTEditViewController
         present(vc, animated: true)
     }
     
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let object = toDoCells[indexPath.row]
         let vc = UIStoryboard(name: "Main", bundle: Bundle.main)
         .instantiateViewController(withIdentifier: "EditViewController")
-        as! EditViewController
+        as! TTEditViewController
         vc.cellID = object.id
         present(vc, animated: true)
     }
