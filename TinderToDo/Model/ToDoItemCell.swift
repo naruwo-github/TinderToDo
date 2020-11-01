@@ -9,6 +9,7 @@
 import UIKit
 
 class ToDoItemCell: UITableViewCell {
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var memoLabel: UILabel!
     

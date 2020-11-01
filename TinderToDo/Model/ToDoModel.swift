@@ -7,9 +7,11 @@
 //
 
 import Foundation
+
 import RealmSwift
 
 class ToDoModel: Object {
+    
     @objc dynamic var id = 0
     @objc dynamic var title: String = "Title"
     @objc dynamic var memo: String = "Memo: "

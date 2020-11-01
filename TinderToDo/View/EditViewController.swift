@@ -7,9 +7,11 @@
 //
 
 import UIKit
+
 import RealmSwift
 
 class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+    
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var memoTextView: UITextView!
     

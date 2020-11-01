@@ -6,7 +6,6 @@
 //  Copyright © 2020 Narumi Nogawa. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 @IBDesignable class ExtendedButton: UIButton {
@@ -38,12 +37,12 @@ import UIKit
     @IBInspectable var enableShadow: Bool = false {
         didSet {
             if enableShadow {
-                setButtonShadow()
+                self.setButtonShadow()
             }
         }
     }
     
-    func setButtonShadow() {
+    private func setButtonShadow() {
         self.clipsToBounds = false
         let layer = self.layer
         layer.masksToBounds = false

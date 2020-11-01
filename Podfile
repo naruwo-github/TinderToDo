@@ -7,5 +7,6 @@ target 'TinderToDo' do
 
   # Pods for TinderToDo
   pod 'RealmSwift'
+  pod 'SwiftLint'
 
 end
