@@ -43,7 +43,7 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     }
 
     @IBAction private func saveButtonTapped(_ sender: Any) {
-        do{
+        do {
             try realm.write({ () -> Void in
                 cell.title = self.titleTextField.text ?? "Title"
                 cell.memo = self.memoTextView.text
@@ -53,30 +53,30 @@ class EditViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
                     realm.add(cell)
                 }
             })
-        }catch{
+        } catch {
             print("Save was Failed")
         }
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction private func deleteButtonTapped(_ sender: Any) {
-        do{
+        do {
             try realm.write {
                 if cellID >= 0 {
                     realm.delete(cell)
                 }
             }
-        }catch{
+        } catch {
             print("Delete was Failed...")
         }
         self.dismiss(animated: true, completion: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (self.memoTextView.isFirstResponder) {
+        if self.memoTextView.isFirstResponder {
             self.memoTextView.resignFirstResponder()
         }
-        if (self.titleTextField.isFirstResponder) {
+        if self.titleTextField.isFirstResponder {
             self.titleTextField.resignFirstResponder()
         }
     }
